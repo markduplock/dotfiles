@@ -44,6 +44,12 @@ rm -rf ~/nerd-fonts
 echo "🔁 Setting zsh as the default shell..."
 chsh -s $(which zsh)
 
+# === 7.5 Move dotfiles into ~ ===
+echo "📂 Deploying .zshrc and .p10k.zsh to home directory..."
+cp ./README.md ~/.README_dotfiles.md  # optional, in case you want to read it from ~
+cp .zshrc ~/.zshrc
+cp .p10k.zsh ~/.p10k.zsh
+
 # === 8. Completion ===
 echo "✅ Setup complete!"
 
