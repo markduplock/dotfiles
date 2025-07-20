@@ -1,3 +1,4 @@
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 # Path to oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
@@ -38,3 +39,11 @@ export KEYTIMEOUT=1
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
+
+# Fuzzy cd to directories using fzf (case-insensitive)
+cdf() {
+  local dir
+  dir=$(find . -type d -iname '*' 2>/dev/null | fzf --height=40% --reverse --border) && cd "$dir"
+}
+
