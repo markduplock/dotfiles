@@ -22,6 +22,8 @@ alias b='cd ~/bin'
 alias d='cd ~/dev'
 alias s='cd ~/screens'
 alias dl='cd ~/Downloads'
+alias ss='flameshot gui -p ~/Pictures'
+alias zz='systemctl suspend'
 
 
 # Export PATH additions if needed

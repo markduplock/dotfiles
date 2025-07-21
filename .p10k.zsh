@@ -15,8 +15,28 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   status                # exit code of last command
   command_execution_time
   time
-  ram
 )
+
+# Custom RAM segment
+ram_usage() {
+  local used=$(free -h | awk '/^Mem:/ {print $3}')
+  local total=$(free -h | awk '/^Mem:/ {print $2}')
+  local percent=$(free | awk '/^Mem:/ {printf("%.0f", $3/$2 * 100)}')
+  echo "$used / $total ($percent%)"
+}
+
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status
+  command_execution_time
+  time
+  custom_ram
+)
+
+typeset -g POWERLEVEL9K_CUSTOM_RAM="ram_usage"
+typeset -g POWERLEVEL9K_CUSTOM_RAM_BACKGROUND='52'
+typeset -g POWERLEVEL9K_CUSTOM_RAM_FOREGROUND='255'
+
+
 
 # Icons
 typeset -g POWERLEVEL9K_HOME_ICON=''         # 
