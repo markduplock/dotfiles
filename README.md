@@ -39,7 +39,7 @@ exec zsh
 
 ## 💡 Pro Tip
 
-Run:
+If you don't like the look of the terminal, run:
 
 ```bash
 p10k configure
