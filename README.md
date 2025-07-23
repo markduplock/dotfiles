@@ -1,6 +1,6 @@
 # 🚀 Dotfiles Bootstrap Script
 
-This script automates the setup of your Zsh-based terminal environment on Ubuntu or any Debian-based system.
+This script automates the setup of your Zsh-based terminal environment on Fedora.
 
 ## 📦 What It Installs
 

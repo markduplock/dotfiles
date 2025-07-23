@@ -2,12 +2,12 @@
 
 set -e
 
-echo "🔧 Starting dotfiles bootstrap for Ubuntu..."
+echo "🔧 Starting dotfiles bootstrap for Fedora..."
 
 # === 1. Package Install ===
 echo "📦 Installing required packages..."
-sudo apt update
-sudo apt install -y zsh git curl wget trash-cli unzip fontconfig
+sudo dnf update -y
+sudo dnf install -y zsh git curl wget trash-cli unzip fontconfig python3-pip python3-virtualenv gnome-software flatpak
 
 # === 2. Backup existing configs ===
 echo "🗂 Backing up existing .zshrc and .p10k.zsh (if any)..."
