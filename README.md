@@ -27,8 +27,8 @@ After cloning this dotfiles repo:
 ```bash
 git clone https://github.com/markduplock/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-chmod +x bootstrap_dotfiles.sh
-./bootstrap_dotfiles.sh
+chmod +x bootstrap_dotfiles_*required_installer_.sh
+./bootstrap_dotfiles_*required_installer.sh
 ```
 
 Then log out and back in — or run:
