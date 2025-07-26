@@ -47,12 +47,3 @@ p10k configure
 
 to customize your prompt with the MesloLGS Nerd Font.
 
-## 🧙‍♂️ Bonus Ideas
-
-- Add your own aliases and functions to `.zshrc`
-- Include Flatpak installs or VS Code config
-- Automate SSH key setup or Tailscale
-
----
-
-**Welcome to your new shell.** It's fast, it's clean, and it's yours.
