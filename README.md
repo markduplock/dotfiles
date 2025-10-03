@@ -1,6 +1,6 @@
-# 🚀 Dotfiles Bootstrap Script
+# 🚀 Dotfiles Bootstrap
 
-This script automates the setup of your Zsh-based terminal environment on Fedora.
+This script automates the setup of your Zsh-based terminal environment on Ubuntu or other Debian based system.
 
 ## 📦 What It Installs
 
@@ -10,40 +10,34 @@ This script automates the setup of your Zsh-based terminal environment on Fedora
 - `zsh-autosuggestions`: fish-style autosuggestions
 - `zsh-syntax-highlighting`: real-time syntax coloring
 - `trash-cli`: safer alternative to `rm`
-- `MesloLGS Nerd Font`: for perfect font rendering with powerlevel10k
+- `JetbrainsMono Nerd Font`: for perfect font rendering with powerlevel10k
 
 ## 🗂 What It Does
 
 - Backs up any existing `.zshrc` or `.p10k.zsh` files
 - Installs the full Zsh + plugin stack
-- Installs MesloLGS Nerd Font locally
+- Installs JetbrainsMono Nerd Font
 - Sets Zsh as your default shell
-- Displays any aliases defined in your environment
 
 ## 🧪 How To Use
+Replace <USER>/<REPO> with your GitHub path after you push these files:
+`curl -fsSL https://raw.githubusercontent.com/<USER>/<REPO>/main/install.sh | bash`
 
-After cloning this dotfiles repo:
+- The installer will fetch setup-zsh.sh from the same repo and run it.
+- You’ll be prompted for sudo to install apt packages.
 
-```bash
-git clone https://github.com/markduplock/dotfiles.git ~/dotfiles
-cd ~/dotfiles
-chmod +x bootstrap_dotfiles_*required_installer_.sh
-./bootstrap_dotfiles_*required_installer.sh
+## ♻️ Uninstall / Revert
+- Restore your backups:
+```
+mv ~/.zshrc.OLD ~/.zshrc # or the timestamped variant
+mv ~/.p10k.zsh.OLD ~/.p10k.zsh
 ```
 
-Then log out and back in — or run:
+- Change your default shell back to bash:
+`chsh -s /bin/bash "$USER"`
 
-```bash
-exec zsh
-```
+- (Optional) Remove installed fonts:
+`cd ~/.local/share/fonts/NerdFonts/JetBrainsMonoNL` and run `fc-cache -f`
 
-## 💡 Pro Tip
-
-If you don't like the look of the terminal, run:
-
-```bash
-p10k configure
-```
-
-to customize your prompt with the MesloLGS Nerd Font.
-
+## 📜 License
+MIT

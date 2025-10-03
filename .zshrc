@@ -20,9 +20,7 @@ alias rm='trash'
 alias ..='cd ..'
 alias b='cd ~/bin'
 alias d='cd ~/dev'
-alias s='cd ~/screens'
 alias dl='cd ~/Downloads'
-alias ss='flameshot gui -p ~/Pictures'
 alias zz='systemctl suspend'
 
 
@@ -48,4 +46,3 @@ cdf() {
   local dir
   dir=$(find . -type d -iname '*' 2>/dev/null | fzf --height=40% --reverse --border) && cd "$dir"
 }
-
