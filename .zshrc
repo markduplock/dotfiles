@@ -28,7 +28,7 @@ alias zz='systemctl suspend'
 # export PATH="$HOME/bin:$PATH"
 
 # Enable colors in `ls` and use human-readable file sizes
-alias ls='ls --color=auto -h'
+alias ls='ls -ahl --group-directories-first --color=auto'
 alias ll='ls -lah'
 alias la='ls -A'
 
@@ -41,8 +41,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 
-# Fuzzy cd to directories using fzf (case-insensitive)
-cdf() {
-  local dir
-  dir=$(find . -type d -iname '*' 2>/dev/null | fzf --height=40% --reverse --border) && cd "$dir"
-}
+# # Fuzzy cd to directories using fzf (case-insensitive)
+# cdf() {
+#   local dir
+#   dir=$(find . -type d -iname '*' 2>/dev/null | fzf --height=40% --reverse --border) && cd "$dir"
+# }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
